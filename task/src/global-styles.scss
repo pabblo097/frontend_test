@@ -1,14 +1,27 @@
-@import "./styles/fonts.scss";
-@import "./styles/colors.scss";
-@import "./styles/flex.scss";
+@import './styles/fonts.scss';
+@import './styles/colors.scss';
+@import './styles/flex.scss';
 
+// reset css
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+* {
+   margin: 0;
+}
+
+//global styles
 body {
-  font-family: $default-font-family, sans-serif;
-  background: $colors-gray-300;
-  margin: 0;
-  color: white;
+   font-family: $default-font-family, sans-serif;
+   background: $colors-gray-300;
+   margin: 0;
+   color: white;
+   box-sizing: border-box;
 }
 
 #root {
-  @include flex-column;
+   @include flex-column;
 }

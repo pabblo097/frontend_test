@@ -1,0 +1,19 @@
+@import '../../styles/fonts.scss';
+@import '../../styles/colors.scss';
+@import '../../styles/flex.scss';
+@import '../../styles/breakpoints.scss';
+
+.navbar {
+   @include flex-row;
+   padding: 1.125rem 1.25rem;
+   width: 100%;
+   background: $colors-gray-600;
+   justify-content: space-between;
+   align-items: center;
+   top: 0;
+   position: sticky;
+
+   @include from-desktop {
+      padding: 1.25rem 3.75rem;
+   }
+}

@@ -1,0 +1,32 @@
+@import '../../styles/colors.scss';
+@import '../../styles/flex.scss';
+@import '../../styles/breakpoints.scss';
+
+$circle-size-mobile: 4.5rem;
+$circle-size-desktop: 6.25rem;
+$logo-size: 65%;
+
+.navbar__html-logo {
+   @include flex-center;
+
+   width: $circle-size-mobile;
+   height: $circle-size-mobile;
+   border-radius: 100%;
+   background: $colors-gray-400;
+   transition: 0.3s;
+
+   svg {
+      width: $logo-size;
+      height: $logo-size;
+      color: white;
+   }
+
+   &:hover {
+      background: $colors-gold-100;
+   }
+
+   @include from-desktop {
+      width: $circle-size-desktop;
+      height: $circle-size-desktop;
+   }
+}
