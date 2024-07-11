@@ -1,0 +1,26 @@
+@import '../../styles/flex.scss';
+@import '../../styles/breakpoints.scss';
+
+.heading-with-divider {
+   @include flex-column;
+   font-size: 2rem;
+   gap: 0.5em;
+   align-items: center;
+   margin: 1.25rem auto;
+
+   @include from-desktop {
+      font-size: 3rem;
+      margin: 4rem auto;
+   }
+}
+
+.heading-with-divider__text {
+   font-size: 1em;
+   font-weight: normal;
+}
+
+.heading-with-divider__divider {
+   width: 80%;
+   height: 1px;
+   background: white;
+}

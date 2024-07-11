@@ -6,7 +6,7 @@ $circle-size-mobile: 4.5rem;
 $circle-size-desktop: 6.25rem;
 $logo-size: 65%;
 
-.navbar__html-logo {
+.header__html-logo {
    @include flex-center;
 
    width: $circle-size-mobile;
