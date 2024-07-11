@@ -1,0 +1,15 @@
+$breakpoints-mobile: 0;
+$breakpoints-tablet: 600px;
+$breakpoints-desktop: 960px;
+
+@mixin from-tablet {
+  @media screen and (min-width: $breakpoints-tablet) {
+    @content;
+  }
+}
+
+@mixin from-desktop {
+  @media screen and (min-width: $breakpoints-desktop) {
+    @content;
+  }
+}
