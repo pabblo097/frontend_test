@@ -3,7 +3,7 @@
 @import '../../styles/flex.scss';
 @import '../../styles/breakpoints.scss';
 
-.navbar {
+.header {
    @include flex-row;
    padding: 1.125rem 1.25rem;
    width: 100%;
@@ -16,4 +16,8 @@
    @include from-desktop {
       padding: 1.25rem 3.75rem;
    }
+}
+
+.header__text-wrapper {
+   @include flex-column;
 }

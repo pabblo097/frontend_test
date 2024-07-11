@@ -1,3 +1,5 @@
+import styles from './styles.module.scss';
+
 export function getTextWithHighlight(text: string, highlight?: string) {
    if (highlight === undefined || text.indexOf(highlight) === -1) {
       return text;
@@ -11,7 +13,9 @@ export function getTextWithHighlight(text: string, highlight?: string) {
    return (
       <>
          {beforeHighlight}
-         <span>{highlight}</span>
+
+         <span className={styles.highlight}>{highlight}</span>
+
          {afterHighlight}
       </>
    );
