@@ -13,3 +13,21 @@
       padding: 1.25rem 4rem;
    }
 }
+
+.footer__first-section {
+   @include flex-row;
+   justify-content: start;
+   flex-basis: calc(100% / 3);
+}
+
+.footer__second-section {
+   @include flex-row;
+   justify-content: center;
+   flex-basis: calc(100% / 3);
+}
+
+.footer__third-section {
+   @include flex-row;
+   justify-content: end;
+   flex-basis: calc(100% / 3);
+}

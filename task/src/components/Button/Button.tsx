@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ButtonProps } from './constants';
 import styles from './styles.module.scss';
 
-function Button({ children, icon, size = 'normal', ...restProps }: ButtonProps) {
+function Button({ children, icon, variant = 'normal', ...restProps }: ButtonProps) {
    return (
       <button
-         className={`${styles.button} ${styles[`button--${size}`]}`}
+         className={`${styles.button} ${styles[`button--${variant}`]}`}
          {...restProps}
       >
          {children}

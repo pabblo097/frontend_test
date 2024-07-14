@@ -9,12 +9,14 @@ function Menu({ children, buttonLabel }: MenuProps) {
       <div className={styles.menu}>
          <Button
             icon={faAngleUp}
-            size={'large'}
+            variant={'large'}
          >
             {buttonLabel}
          </Button>
 
-         <menu className={styles.menu__content}>{children}</menu>
+         <nav>
+            <menu className={styles.menu__content}>{children}</menu>
+         </nav>
       </div>
    );
 }

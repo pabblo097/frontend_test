@@ -1,0 +1,30 @@
+@import '../../styles/breakpoints.scss';
+@import '../../styles/colors.scss';
+
+.nabthat-logo {
+   display: none;
+   position: relative;
+   z-index: 1;
+
+   @include from-desktop {
+      display: block;
+   }
+}
+
+.nabthat-logo__content {
+   font-size: 1.75rem;
+   color: $colors-gray-400;
+   z-index: 1;
+   background: $colors-gray-500;
+   padding: 0 0.25rem;
+}
+
+.nabthat-logo__line {
+   position: absolute;
+   top: 50%;
+   right: -50%;
+   width: 200%;
+   height: 1px;
+   background: $colors-gray-400;
+   z-index: -1;
+}

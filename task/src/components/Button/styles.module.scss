@@ -7,7 +7,6 @@
    gap: 0.75em;
    font-size: 1rem;
    font-weight: bold;
-   border: 1px solid white;
    color: $colors-gray-100;
    padding: 0.9em 3.5em;
    border-radius: 4px;
@@ -50,9 +49,11 @@
 }
 
 .button--normal {
+   border: 1px solid white;
    padding: 0.9em 3.5em;
 }
 
 .button--large {
+   border: 1px solid $colors-gray-400;
    padding: 0.9em 6em;
 }

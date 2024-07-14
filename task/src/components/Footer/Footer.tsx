@@ -1,19 +1,26 @@
 import CssIsAwesomeLogo from '../CssIsAwesomeLogo';
 import Menu, { MenuItem } from '../Menu';
+import NabthatLogo from '../NabthatLogo';
 import styles from './styles.module.scss';
 
 function Footer() {
    return (
       <footer className={styles.footer}>
-         <CssIsAwesomeLogo />
+         <div className={styles['footer__first-section']}>
+            <CssIsAwesomeLogo />
+         </div>
 
-         {/* <div>{'nabthat'}</div> */}
+         <div className={styles['footer__second-section']}>
+            <NabthatLogo />
+         </div>
 
-         <Menu buttonLabel={'POKAŻ'}>
-            <MenuItem>{'ZRESETUJ USTAWIENIA'}</MenuItem>
+         <div className={styles['footer__third-section']}>
+            <Menu buttonLabel={'POKAŻ'}>
+               <MenuItem>{'ZRESETUJ USTAWIENIA'}</MenuItem>
 
-            <MenuItem>{'POKAŻ DANE OSOBOWE'}</MenuItem>
-         </Menu>
+               <MenuItem>{'POKAŻ DANE OSOBOWE'}</MenuItem>
+            </Menu>
+         </div>
       </footer>
    );
 }
