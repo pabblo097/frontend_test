@@ -1,0 +1,15 @@
+@import '../../styles/flex.scss';
+@import '../../styles/colors.scss';
+@import '../../styles/breakpoints.scss';
+
+.footer {
+   @include flex-row;
+   align-items: center;
+   padding: 1.125rem 1.25rem;
+   justify-content: space-between;
+   background: $colors-gray-500;
+
+   @include from-desktop {
+      padding: 1.25rem 4rem;
+   }
+}

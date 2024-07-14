@@ -5,6 +5,7 @@
    @include flex-column;
    padding: 2rem;
    gap: 3.5rem;
+   flex: 1;
 
    @include from-desktop {
       @include flex-row;
