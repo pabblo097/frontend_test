@@ -5,11 +5,14 @@ import ReactDOM from 'react-dom/client';
 
 import App from './App.tsx';
 import { AppContextProvider } from './contexts/AppContext.tsx';
+import { ModalContextProvider } from './contexts/ModalContext.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
    <React.StrictMode>
-      <AppContextProvider>
-         <App />
-      </AppContextProvider>
+      <ModalContextProvider>
+         <AppContextProvider>
+            <App />
+         </AppContextProvider>
+      </ModalContextProvider>
    </React.StrictMode>,
 );

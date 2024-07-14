@@ -9,6 +9,7 @@ import {
 } from 'react';
 
 import jsonData from '../assets/data.json';
+import useModal from '../hooks/useModal';
 import { getRandInt } from './helpers';
 
 export interface JsonData {
@@ -31,11 +32,13 @@ export const AppContext = createContext<AppContextType | null>(null);
 
 export function AppContextProvider({ children }: { children: ReactNode }) {
    // TODO: dodaj treść
-   const [data, setData] = useState<JsonData[]>(jsonData);
+   const [data] = useState<JsonData[]>(jsonData);
 
    const [shouldDisplayName, setShouldDisplayName] = useState(false);
    const [content, setContent] = useState([data[0]]);
    const [option, setOption] = useState(0);
+
+   const { setIsNoUniqueModalOpened, setIsCantAddModalOpened } = useModal();
 
    const replaceContent = useCallback(() => {
       const dataValue = option === 2 ? getRandInt(0, data.length - 1) : option;
@@ -45,6 +48,7 @@ export function AppContextProvider({ children }: { children: ReactNode }) {
 
    const addContent = useCallback(() => {
       if (content.length === data.length) {
+         setIsNoUniqueModalOpened(true);
          return;
       }
 
@@ -52,6 +56,7 @@ export function AppContextProvider({ children }: { children: ReactNode }) {
 
       if (content.some((v) => v.id === dataValue.toString())) {
          if (option !== 2) {
+            setIsCantAddModalOpened(true);
             return;
          }
 
