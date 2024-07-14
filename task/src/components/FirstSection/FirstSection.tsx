@@ -1,11 +1,11 @@
-import { useState } from 'react';
 
+import useAppContext from '../../hooks/useAppContext';
 import RadioButton from '../RadioButton';
 import SectionHeading from '../SectionHeading';
 import styles from './styles.module.scss';
 
 function FirstSection() {
-   const [checkedRadio, setCheckedRadio] = useState('opt1');
+   const { option, setOption } = useAppContext();
 
    return (
       <section className={styles['first-section']}>
@@ -13,28 +13,25 @@ function FirstSection() {
 
          <div className={styles['first-section__radio-group']}>
             <RadioButton
-               checked={checkedRadio === 'opt1'}
-               name={'foo'}
-               value={'opt1'}
-               onClick={() => setCheckedRadio('opt1')}
+               checked={option === 0}
+               name={'options'}
+               onClick={() => setOption(0)}
             >
                {'Opcja pierwsza'}
             </RadioButton>
 
             <RadioButton
-               checked={checkedRadio === 'opt2'}
-               name={'foo'}
-               value={'opt2'}
-               onClick={() => setCheckedRadio('opt2')}
+               checked={option === 1}
+               name={'options'}
+               onClick={() => setOption(1)}
             >
                {'Opcja druga'}
             </RadioButton>
 
             <RadioButton
-               checked={checkedRadio === 'opt3'}
-               name={'foo'}
-               value={'opt3'}
-               onClick={() => setCheckedRadio('opt3')}
+               checked={option === 2}
+               name={'options'}
+               onClick={() => setOption(2)}
             >
                {'Opcja losowa'}
             </RadioButton>

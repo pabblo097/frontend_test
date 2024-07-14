@@ -5,7 +5,6 @@ import styles from './styles.module.scss';
 
 function Header() {
    const { shouldDisplayName } = useAppContext();
-   console.log('TCL ~ Header ~ shouldDisplayName:', shouldDisplayName);
 
    return (
       <header className={styles.header}>

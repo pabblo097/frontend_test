@@ -1,7 +1,10 @@
+import useAppContext from '../../hooks/useAppContext';
 import SectionHeading from '../SectionHeading';
+import { jsonDataCompareFn } from './helpers';
 import styles from './styles.module.scss';
 
 function ThirdSection() {
+   const { content } = useAppContext();
    return (
       <section className={styles['third-section']}>
          <SectionHeading>
@@ -11,29 +14,9 @@ function ThirdSection() {
          </SectionHeading>
 
          <div className={styles['third-section__content']}>
-            {
-               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non varius velit. Nam mattis'
-            }
-
-            {
-               'iaculis risus, pharetra euismod dolor vulputate ut. Aliquam dignissim felis sed egestas'
-            }
-
-            {
-               'facilisis. Duis imperdiet finibus neque sit amet sagittis. Morbi sit amet tellus sed ligula'
-            }
-
-            {'dapibus dignissim sed quis orci. Interdum et malesuada fames ac ante ipsum primis in'}
-
-            {
-               'faucibus. Curabitur fringilla ante turpis, in fermentum ligula efficitur id. Suspendisse'
-            }
-
-            {
-               'vitae finibus enim. Aliquam vel suscipit lorem. Fusce ex felis, tristique sit amet aliquam'
-            }
-
-            {'vel, fringilla ultricies metus.'}
+            {content.sort(jsonDataCompareFn).map((v) => (
+               <p key={v.id}>{v.value}</p>
+            ))}
          </div>
       </section>
    );

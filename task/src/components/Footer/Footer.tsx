@@ -5,7 +5,7 @@ import NabthatLogo from '../NabthatLogo';
 import styles from './styles.module.scss';
 
 function Footer() {
-   const { setShouldDisplayName } = useAppContext();
+   const { setShouldDisplayName, reset } = useAppContext();
 
    return (
       <footer className={styles.footer}>
@@ -19,7 +19,7 @@ function Footer() {
 
          <div className={styles['footer__third-section']}>
             <Menu buttonLabel={'POKAŻ'}>
-               <MenuItem>{'ZRESETUJ USTAWIENIA'}</MenuItem>
+               <MenuItem onClick={reset}>{'ZRESETUJ USTAWIENIA'}</MenuItem>
 
                <MenuItem onClick={() => setShouldDisplayName(true)}>
                   {'POKAŻ DANE OSOBOWE'}
