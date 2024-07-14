@@ -5,6 +5,13 @@
 $circle-size-mobile: 4.5rem;
 $circle-size-desktop: 6.25rem;
 $logo-size: 65%;
+$hover-logo-size: 75%;
+
+.header__anchor {
+   &:focus {
+      @include focus-box-shadow;
+   }
+}
 
 .header__html-logo {
    @include flex-center;
@@ -18,11 +25,17 @@ $logo-size: 65%;
    svg {
       width: $logo-size;
       height: $logo-size;
+      transition: 0.05s;
       color: white;
    }
 
    &:hover {
       background: $colors-gold-100;
+
+      svg {
+         width: $hover-logo-size;
+         height: $hover-logo-size;
+      }
    }
 
    @include from-desktop {

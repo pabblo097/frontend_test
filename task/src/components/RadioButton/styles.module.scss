@@ -1,0 +1,46 @@
+@import '../../styles/colors.scss';
+@import '../../styles/flex.scss';
+@import '../../styles/breakpoints.scss';
+
+.radio-button {
+   @include flex-row;
+   align-items: center;
+}
+
+.radio-button__input {
+   height: 1.8em;
+   width: 1.8em;
+   font-size: 1em;
+   appearance: none;
+   -webkit-appearance: none;
+   border: 0.25em solid white;
+   border-radius: 50%;
+   transition: 0.2s;
+
+   &:checked {
+      box-shadow: inset 0 0 0 0.25em $colors-gray-300;
+      background-color: white;
+      border-width: 0.25em;
+   }
+}
+
+.radio-button__label {
+   @include flex-row;
+   align-items: center;
+   font-size: 1.1rem;
+   gap: 1em;
+   font-weight: lighter;
+   transition: 0.2s;
+
+   &:has(.radio-button__input:hover) {
+      font-weight: normal;
+   }
+
+   &:has(.radio-button__input:checked) {
+      font-weight: bold;
+   }
+
+   @include from-desktop {
+      font-size: 1.4rem;
+   }
+}

@@ -12,6 +12,7 @@
    align-items: center;
    top: 0;
    position: sticky;
+   z-index: 10;
 
    @include from-desktop {
       padding: 1.25rem 3.75rem;

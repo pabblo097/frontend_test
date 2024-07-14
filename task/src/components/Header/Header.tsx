@@ -5,10 +5,12 @@ import styles from './styles.module.scss';
 function Header() {
    return (
       <header className={styles.header}>
-         <HtmlLogo />
+         <nav>
+            <HtmlLogo />
+         </nav>
 
          <div className={styles['header__text-wrapper']}>
-            <HeaderText highlight={"rekrutacyjne"}>{"Zadanie rekrutacyjne"}</HeaderText>
+            <HeaderText highlight={'rekrutacyjne'}>{'Zadanie rekrutacyjne'}</HeaderText>
 
             {/* TODO: show name after footer menu button clicked */}
          </div>

@@ -1,15 +1,22 @@
 $breakpoints-mobile: 0;
 $breakpoints-tablet: 600px;
 $breakpoints-desktop: 960px;
+$breakpoints-desktop-xl: 1156px;
 
 @mixin from-tablet {
-  @media screen and (min-width: $breakpoints-tablet) {
-    @content;
-  }
+   @media screen and (min-width: $breakpoints-tablet) {
+      @content;
+   }
 }
 
 @mixin from-desktop {
-  @media screen and (min-width: $breakpoints-desktop) {
-    @content;
-  }
+   @media screen and (min-width: $breakpoints-desktop) {
+      @content;
+   }
+}
+
+@mixin from-desktop-xl {
+   @media screen and (min-width: $breakpoints-desktop-xl) {
+      @content;
+   }
 }

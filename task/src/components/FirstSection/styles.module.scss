@@ -1,0 +1,20 @@
+@import '../../styles/flex.scss';
+@import '../../styles/breakpoints.scss';
+
+.first-section {
+   @include flex-column;
+   gap: 1.5rem;
+   align-items: start;
+
+   @include from-desktop {
+      flex-basis: 50%;
+      align-items: center;
+      gap: 5rem;
+   }
+}
+
+.first-section__radio-group {
+   @include flex-column;
+   align-self: start;
+   gap: 1.25rem;
+}

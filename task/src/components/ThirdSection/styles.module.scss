@@ -1,0 +1,26 @@
+@import '../../styles/breakpoints.scss';
+@import '../../styles/flex.scss';
+@import '../../styles/colors.scss';
+
+.third-section {
+   min-width: 0;
+   text-align: center;
+
+   @include from-desktop {
+      flex-basis: calc(100% / 3);
+   }
+}
+
+.third-section__content {
+   @include flex-column;
+   margin-top: 2.25rem;
+   font-size: 1rem;
+   font-weight: lighter;
+   color: $colors-gray-100;
+
+   @include from-desktop {
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+      margin-top: 4.5rem;
+   }
+}

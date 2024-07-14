@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import HeadingWithDivider from './components/HeadingWithDivider';
+import MainContent from './components/MainContent';
 
 function App() {
    return (
@@ -7,6 +8,8 @@ function App() {
          <Header />
 
          <HeadingWithDivider />
+
+         <MainContent />
       </>
    );
 }

@@ -5,5 +5,9 @@ $colors-gray-400: #2c2c2c;
 $colors-gray-500: #16171a;
 $colors-gray-600: #0f0f12;
 
-$colors-gold-100: #d07f15;
-$colors-gold-200: #b56f12;
+$colors-gold-100: #b56f12;
+$colors-gold-200: #e99b29;
+
+@mixin focus-box-shadow {
+   box-shadow: 0px 0px 5px 5px $colors-gold-200;
+}
