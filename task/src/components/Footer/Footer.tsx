@@ -1,5 +1,5 @@
-import Button from '../Button';
 import CssIsAwesomeLogo from '../CssIsAwesomeLogo';
+import Menu, { MenuItem } from '../Menu';
 import styles from './styles.module.scss';
 
 function Footer() {
@@ -7,11 +7,13 @@ function Footer() {
       <footer className={styles.footer}>
          <CssIsAwesomeLogo />
 
-         <div>{'nabthat'}</div>
+         {/* <div>{'nabthat'}</div> */}
 
-         <div>
-            <Button>{'POKAŻ ^'}</Button>
-         </div>
+         <Menu buttonLabel={'POKAŻ'}>
+            <MenuItem>{'ZRESETUJ USTAWIENIA'}</MenuItem>
+
+            <MenuItem>{'POKAŻ DANE OSOBOWE'}</MenuItem>
+         </Menu>
       </footer>
    );
 }

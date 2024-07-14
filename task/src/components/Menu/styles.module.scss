@@ -1,0 +1,35 @@
+@import '../../styles/flex.scss';
+@import '../../styles/colors.scss';
+@import '../../styles/breakpoints.scss';
+
+.menu {
+   position: relative;
+
+   &:has(button:focus-within) .menu__content {
+      opacity: 1;
+      pointer-events: all;
+   }
+}
+
+.menu__content {
+   @include flex-column;
+   opacity: 0;
+   pointer-events: none;
+   gap: 0.5rem;
+   width: 100%;
+   bottom: 100%;
+   right: 0;
+   position: absolute;
+   background: linear-gradient(white 0% 66%, $colors-gray-500 66% 100%);
+   color: black;
+   list-style: none;
+   padding: 1rem 1rem 3.5rem;
+   border-radius: 4px;
+   box-shadow: 0px 0px 15px 3px $colors-gray-500;
+   transition: 0.3s;
+
+   @include from-desktop {
+      background: linear-gradient(white 0% 60%, $colors-gray-500 60% 100%);
+      padding: 1rem 1rem 4.5rem;
+   }
+}

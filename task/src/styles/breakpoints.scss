@@ -1,7 +1,7 @@
 $breakpoints-mobile: 0;
 $breakpoints-tablet: 600px;
 $breakpoints-desktop: 960px;
-$breakpoints-desktop-xl: 1156px;
+$breakpoints-desktop-xl: 1356px;
 
 @mixin from-tablet {
    @media screen and (min-width: $breakpoints-tablet) {

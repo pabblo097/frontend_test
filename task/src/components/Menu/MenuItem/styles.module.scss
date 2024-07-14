@@ -1,0 +1,16 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/flex.scss';
+
+.menu__content-item {
+   @include flex-row;
+   align-items: center;
+   gap: 0.5em;
+   font-size: 1rem;
+   font-weight: 600;
+   transition: 0.3s;
+   cursor: pointer;
+
+   &:hover {
+      color: $colors-gold-200;
+   }
+}
