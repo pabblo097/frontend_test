@@ -3,7 +3,6 @@
 
 .header__text {
    font-size: 1.25rem;
-   font-weight: normal;
 
    @include from-desktop {
       font-size: 2.25rem;
@@ -12,4 +11,12 @@
 
 .highlight {
    font-weight: bold;
+}
+
+.header__text--normal {
+   font-weight: normal;
+}
+
+.header__text--lighter {
+   font-weight: lighter;
 }

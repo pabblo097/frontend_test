@@ -5,9 +5,9 @@
 .menu {
    position: relative;
 
-   &:has(button:focus-within) .menu__content {
+   &:has(button:focus) .menu__content {
       opacity: 1;
-      pointer-events: all;
+      pointer-events: auto;
    }
 }
 
@@ -31,5 +31,10 @@
    @include from-desktop {
       background: linear-gradient(white 0% 60%, $colors-gray-500 60% 100%);
       padding: 1rem 1rem 4.5rem;
+   }
+
+   &:hover {
+      opacity: 1;
+      pointer-events: auto;
    }
 }

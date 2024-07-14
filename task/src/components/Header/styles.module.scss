@@ -20,4 +20,5 @@
 
 .header__text-wrapper {
    @include flex-column;
+   align-items: end;
 }

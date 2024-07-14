@@ -1,9 +1,12 @@
+import useAppContext from '../../hooks/useAppContext';
 import CssIsAwesomeLogo from '../CssIsAwesomeLogo';
 import Menu, { MenuItem } from '../Menu';
 import NabthatLogo from '../NabthatLogo';
 import styles from './styles.module.scss';
 
 function Footer() {
+   const { setShouldDisplayName } = useAppContext();
+
    return (
       <footer className={styles.footer}>
          <div className={styles['footer__first-section']}>
@@ -18,7 +21,9 @@ function Footer() {
             <Menu buttonLabel={'POKAŻ'}>
                <MenuItem>{'ZRESETUJ USTAWIENIA'}</MenuItem>
 
-               <MenuItem>{'POKAŻ DANE OSOBOWE'}</MenuItem>
+               <MenuItem onClick={() => setShouldDisplayName(true)}>
+                  {'POKAŻ DANE OSOBOWE'}
+               </MenuItem>
             </Menu>
          </div>
       </footer>
