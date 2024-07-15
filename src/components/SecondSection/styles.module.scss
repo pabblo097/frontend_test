@@ -2,7 +2,11 @@
 @import '../../styles/flex.scss';
 
 .second-section {
-   @include flex(column, 2.5rem, normal, end);
+   @include flex(column, 2.5rem, normal, center);
+
+   @include from-mobile-xl {
+      @include flex(column, 2.5rem, normal, end);
+   }
 
    @include from-desktop {
       @include flex(column, 4.5rem, normal, center);

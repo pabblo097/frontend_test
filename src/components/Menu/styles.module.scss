@@ -19,13 +19,18 @@
    opacity: 0;
    pointer-events: none;
    width: 100%;
-   background: linear-gradient(white 0% 73%, $colors-gray-500 73% 100%);
+   background: linear-gradient(white 0% 84%, $colors-gray-500 84% 100%);
    color: black;
    list-style: none;
    padding: 1rem 1rem 3.5rem;
    border-radius: 4px;
    box-shadow: 0px 0px 15px 3px $colors-gray-500;
    transition: 0.3s;
+
+   @include from-mobile-xl {
+      background: linear-gradient(white 0% 73%, $colors-gray-500 73% 100%);
+      padding: 1rem 1rem 3.5rem;
+   }
 
    @include from-desktop {
       background: linear-gradient(white 0% 63%, $colors-gray-500 63% 100%);

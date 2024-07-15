@@ -2,6 +2,7 @@
 @import '../../styles/flex.scss';
 @import '../../styles/fonts.scss';
 @import '../../styles/positions.scss';
+@import '../../styles/breakpoints.scss';
 
 .button {
    @include flex(row, 0.75rem, space-between);
@@ -55,7 +56,11 @@
 
 .button--large {
    border: 1px solid $colors-gray-400;
-   padding: 0.9em 6em;
+   padding: 0.9em 2em;
+
+   @include from-mobile-xl {
+      padding: 0.9em 6em;
+   }
 }
 
 .button--small {

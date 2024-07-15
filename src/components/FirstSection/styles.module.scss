@@ -2,7 +2,11 @@
 @import '../../styles/breakpoints.scss';
 
 .first-section {
-   @include flex(column, 1.5rem, normal, start);
+   @include flex(column, 1.5rem, normal, center);
+
+   @include from-mobile-xl {
+      align-items: start;
+   }
 
    @include from-desktop {
       flex-basis: 50%;
