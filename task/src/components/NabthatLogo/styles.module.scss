@@ -1,10 +1,12 @@
 @import '../../styles/breakpoints.scss';
 @import '../../styles/colors.scss';
 @import '../../styles/fonts.scss';
+@import '../../styles/positions.scss';
 
 .nabthat-logo {
+   @include position(relative);
+
    display: none;
-   position: relative;
    z-index: 1;
 
    @include from-desktop {
@@ -21,9 +23,8 @@
 }
 
 .nabthat-logo__line {
-   position: absolute;
-   top: 50%;
-   right: -50%;
+   @include position(absolute, 50%, -50%);
+
    width: 200%;
    height: 1px;
    background: $colors-gray-400;

@@ -1,9 +1,10 @@
 @import '../../styles/flex.scss';
 @import '../../styles/colors.scss';
 @import '../../styles/breakpoints.scss';
+@import '../../styles/positions.scss';
 
 .menu {
-   position: relative;
+   @include position(relative);
 
    &:has(button:focus) .menu__content {
       opacity: 1;
@@ -13,13 +14,11 @@
 
 .menu__content {
    @include flex(column, 0.5rem);
+   @include position(absolute, none, 0, 100%);
 
    opacity: 0;
    pointer-events: none;
    width: 100%;
-   bottom: 100%;
-   right: 0;
-   position: absolute;
    background: linear-gradient(white 0% 73%, $colors-gray-500 73% 100%);
    color: black;
    list-style: none;

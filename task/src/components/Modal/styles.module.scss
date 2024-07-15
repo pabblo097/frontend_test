@@ -1,5 +1,6 @@
 @import '../../styles/colors.scss';
 @import '../../styles/flex.scss';
+@import '../../styles/positions.scss';
 
 .modal {
    margin: auto;
@@ -23,10 +24,9 @@
 
 .modal__footer {
    @include flex(row, 0, center);
+   @include position(sticky, none, none, 0);
 
    width: 100%;
-   position: sticky;
-   bottom: 0;
    background: $colors-gray-400;
    padding: 1rem 0;
    z-index: 2;

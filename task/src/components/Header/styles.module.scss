@@ -2,14 +2,14 @@
 @import '../../styles/colors.scss';
 @import '../../styles/flex.scss';
 @import '../../styles/breakpoints.scss';
+@import '../../styles/positions.scss';
 
 .header {
    @include flex(row, 0, space-between, center);
+   @include position(sticky, 0);
 
    padding: 1.125rem 1.25rem;
    background: $colors-gray-600;
-   top: 0;
-   position: sticky;
    z-index: 10;
 
    @include from-desktop {
