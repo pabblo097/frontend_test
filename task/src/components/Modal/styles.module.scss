@@ -6,7 +6,8 @@
    background: $colors-gray-400;
    border: 2px $colors-gray-100 solid;
    border-radius: 8px;
-   padding: 1rem 2rem;
+   padding: 1rem 2rem 0;
+   width: 100%;
 
    &::backdrop {
       background: black;
@@ -17,6 +18,16 @@
 .modal__content {
    @include flex-column;
    align-items: center;
-   gap: 1rem;
    color: white;
+}
+
+.modal__footer {
+   width: 100%;
+   @include flex-row;
+   justify-content: center;
+   position: sticky;
+   bottom: 0;
+   background: $colors-gray-400;
+   padding: 1rem 0;
+   z-index: 2;
 }

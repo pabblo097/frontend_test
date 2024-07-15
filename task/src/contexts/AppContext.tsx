@@ -1,38 +1,21 @@
 import {
    createContext,
-   Dispatch,
    ReactNode,
-   SetStateAction,
    useCallback,
    useMemo,
-   useState,
+   useState
 } from 'react';
 
-import jsonData from '../assets/data.json';
 import useModal from '../hooks/useModal';
+import { useStorage } from '../hooks/useStorage';
+import { AppContextType } from './constants';
 import { getRandInt } from './helpers';
-
-export interface JsonData {
-   id: string;
-   value: string;
-}
-
-export interface AppContextType {
-   shouldDisplayName: boolean;
-   setShouldDisplayName: Dispatch<SetStateAction<boolean>>;
-   content: JsonData[];
-   option: number;
-   setOption: Dispatch<SetStateAction<number>>;
-   replaceContent: () => void;
-   addContent: () => void;
-   reset: () => void;
-}
 
 export const AppContext = createContext<AppContextType | null>(null);
 
 export function AppContextProvider({ children }: { children: ReactNode }) {
    // TODO: dodaj treść
-   const [data] = useState<JsonData[]>(jsonData);
+   const { data } = useStorage();
 
    const [shouldDisplayName, setShouldDisplayName] = useState(false);
    const [content, setContent] = useState([data[0]]);
@@ -41,9 +24,9 @@ export function AppContextProvider({ children }: { children: ReactNode }) {
    const { setIsNoUniqueModalOpened, setIsCantAddModalOpened } = useModal();
 
    const replaceContent = useCallback(() => {
-      const dataValue = option === 2 ? getRandInt(0, data.length - 1) : option;
+      const index = option === 2 ? getRandInt(0, data.length - 1) : option;
 
-      setContent([data[dataValue]]);
+      setContent([data[index]]);
    }, [data, option]);
 
    const addContent = useCallback(() => {
@@ -52,9 +35,9 @@ export function AppContextProvider({ children }: { children: ReactNode }) {
          return;
       }
 
-      const dataValue = option === 2 ? getRandInt(0, data.length - 1) : option;
+      const index = option === 2 ? getRandInt(0, data.length - 1) : option;
 
-      if (content.some((v) => v.id === dataValue.toString())) {
+      if (content.some((v) => v.id === data[index].id)) {
          if (option !== 2) {
             setIsCantAddModalOpened(true);
             return;
@@ -64,8 +47,8 @@ export function AppContextProvider({ children }: { children: ReactNode }) {
          return;
       }
 
-      setContent((prevValue) => [...prevValue, data[dataValue]]);
-   }, [content, data, option]);
+      setContent((prevValue) => [...prevValue, data[index]]);
+   }, [content, data, option, setIsCantAddModalOpened, setIsNoUniqueModalOpened]);
 
    const reset = useCallback(() => {
       setShouldDisplayName(false);

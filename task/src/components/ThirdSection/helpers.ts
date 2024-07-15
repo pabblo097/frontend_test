@@ -1,4 +1,4 @@
-import { JsonData } from '../../contexts/AppContext';
+import { JsonData } from '../../hooks/constants';
 
 export function jsonDataCompareFn(a: JsonData, b: JsonData) {
    if (a.value < b.value) {

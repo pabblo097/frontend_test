@@ -1,24 +1,18 @@
 import {
    createContext,
-   Dispatch,
    ReactNode,
-   SetStateAction,
    useMemo,
    useState
 } from 'react';
 
-export interface ModalContextType {
-   isNoUniqueModalOpened: boolean;
-   setIsNoUniqueModalOpened: Dispatch<SetStateAction<boolean>>;
-   isCantAddModalOpened: boolean;
-   setIsCantAddModalOpened: Dispatch<SetStateAction<boolean>>;
-}
+import { ModalContextType } from './constants';
 
 export const ModalContext = createContext<ModalContextType | null>(null);
 
 export function ModalContextProvider({ children }: { children: ReactNode }) {
    const [isNoUniqueModalOpened, setIsNoUniqueModalOpened] = useState(false);
    const [isCantAddModalOpened, setIsCantAddModalOpened] = useState(false);
+   const [isStorageModalOpened, setIsStorageModalOpened] = useState(false);
 
    const value = useMemo(
       () => ({
@@ -26,8 +20,10 @@ export function ModalContextProvider({ children }: { children: ReactNode }) {
          setIsNoUniqueModalOpened,
          isCantAddModalOpened,
          setIsCantAddModalOpened,
+         isStorageModalOpened,
+         setIsStorageModalOpened,
       }),
-      [isCantAddModalOpened, isNoUniqueModalOpened],
+      [isCantAddModalOpened, isNoUniqueModalOpened, isStorageModalOpened],
    );
 
    return <ModalContext.Provider value={value}>{children}</ModalContext.Provider>;

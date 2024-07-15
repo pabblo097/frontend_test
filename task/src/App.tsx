@@ -3,6 +3,7 @@ import Header from './components/Header';
 import HeadingWithDivider from './components/HeadingWithDivider';
 import MainContent from './components/MainContent';
 import Modal from './components/Modal/Modal';
+import StorageModalLayout from './components/StorageModalLayout';
 import useModal from './hooks/useModal';
 
 function App() {
@@ -11,6 +12,8 @@ function App() {
       setIsNoUniqueModalOpened,
       isCantAddModalOpened,
       setIsCantAddModalOpened,
+      isStorageModalOpened,
+      setIsStorageModalOpened,
    } = useModal();
 
    return (
@@ -35,6 +38,14 @@ function App() {
             onCloseModal={() => setIsCantAddModalOpened(false)}
          >
             {'Ta treść została już dodana.'}
+         </Modal>
+
+         <Modal
+            isModalOpened={isStorageModalOpened}
+            maxWidth={900}
+            onCloseModal={() => setIsStorageModalOpened(false)}
+         >
+            <StorageModalLayout />
          </Modal>
       </>
    );

@@ -1,0 +1,15 @@
+@import '../../styles/flex.scss';
+@import '../../styles/colors.scss';
+
+.storage-modal {
+   @include flex-column;
+   gap: 1rem;
+   width: 100%;
+}
+
+.storage-modal__list {
+   list-style: none;
+   padding: 0;
+   @include flex-column;
+   gap: 0.5rem;
+}

@@ -20,7 +20,7 @@
    bottom: 100%;
    right: 0;
    position: absolute;
-   background: linear-gradient(white 0% 66%, $colors-gray-500 66% 100%);
+   background: linear-gradient(white 0% 73%, $colors-gray-500 73% 100%);
    color: black;
    list-style: none;
    padding: 1rem 1rem 3.5rem;
@@ -29,8 +29,8 @@
    transition: 0.3s;
 
    @include from-desktop {
-      background: linear-gradient(white 0% 60%, $colors-gray-500 60% 100%);
-      padding: 1rem 1rem 4.5rem;
+      background: linear-gradient(white 0% 63%, $colors-gray-500 63% 100%);
+      padding: 1rem 1rem 4.75rem;
    }
 
    &:hover {

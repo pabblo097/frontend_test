@@ -4,7 +4,13 @@ import Button from '../Button';
 import { ModalProps } from './constants';
 import styles from './styles.module.scss';
 
-function Modal({ isModalOpened, onCloseModal, children, ...restProps }: ModalProps) {
+function Modal({
+   isModalOpened,
+   onCloseModal,
+   children,
+   maxWidth = 400,
+   ...restProps
+}: ModalProps) {
    const modalRef = useRef<HTMLDialogElement>(null);
 
    useEffect(() => {
@@ -23,13 +29,16 @@ function Modal({ isModalOpened, onCloseModal, children, ...restProps }: ModalPro
       <dialog
          ref={modalRef}
          className={styles.modal}
+         style={{ maxWidth }}
          onCancel={onCloseModal}
          {...restProps}
       >
          <div className={styles.modal__content}>
             {children}
 
-            <Button onClick={onCloseModal}>{'Ok'}</Button>
+            <div className={styles.modal__footer}>
+               <Button onClick={onCloseModal}>{'Ok'}</Button>
+            </div>
          </div>
       </dialog>
    );
