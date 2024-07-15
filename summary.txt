@@ -1,0 +1,22 @@
+[EN]
+What has been achieved:
+- primary objectives
+- additional objectives
+- task for 6
+
+Extras:
+- eslint + prettier configuration
+- labels in a separate file
+- github action to automatically deploy the app after uploading changes
+
+
+[PL]
+Co udało sie zrobić:
+- cele podstawowe
+- cele dodatkowe
+- zadanie na 6
+
+Gratisy:
+- konfiguracja eslint + prettier
+- labelki w osobnym pliku
+- githubowa akcja do automatycznego deployowania appki po wrzuceniu zmian
