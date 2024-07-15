@@ -3,11 +3,13 @@
 
 .storage-modal {
    @include flex(column, 1rem);
+
    width: 100%;
 }
 
 .storage-modal__list {
    @include flex(column, 0.5rem);
+
    list-style: none;
    padding: 0;
 }

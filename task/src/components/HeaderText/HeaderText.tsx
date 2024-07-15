@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 
 function HeaderText({ children, highlight, fontWeight = 'normal' }: HeaderTextProps) {
    return (
-      <span className={`${styles.header__text} ${styles[`header__text--${fontWeight}`]}`}>
+      <span className={`${styles['header-text']} ${styles[`header-text--${fontWeight}`]}`}>
          {getTextWithHighlight(children, highlight)}
       </span>
    );

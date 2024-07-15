@@ -16,6 +16,7 @@
 
 .main-content__sections-wrapper {
    @include flex(row, 0, space-between);
+
    flex-basis: calc(100% / 3 * 2);
    flex-shrink: 0;
 }

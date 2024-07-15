@@ -18,10 +18,6 @@
    z-index: 1;
    transition: 0.3s;
 
-   @include from-desktop {
-      font-size: $font-size-2xl;
-   }
-
    &::before {
       @include position(absolute, 0, 0);
 
@@ -43,5 +39,9 @@
    &:hover::before {
       border: $colors-gold-200 1px solid;
       rotate: 180deg;
+   }
+
+   @include from-desktop {
+      font-size: $font-size-2xl;
    }
 }

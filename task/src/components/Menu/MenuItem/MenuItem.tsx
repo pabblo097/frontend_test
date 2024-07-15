@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 function MenuItem({ children, className, ...restProps }: MenuItemProps) {
    return (
       <li
-         className={`${styles['menu__content-item']} ${className}`}
+         className={`${styles['menu-item']} ${className}`}
          {...restProps}
       >
          <FontAwesomeIcon icon={faAngleRight} />

@@ -2,7 +2,7 @@
 @import '../../../styles/flex.scss';
 @import '../../../styles/fonts.scss';
 
-.menu__content-item {
+.menu-item {
    @include flex(row, 0.5em, normal, center);
 
    font-size: $font-size-base;

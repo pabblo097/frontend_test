@@ -1,7 +1,7 @@
 @import '../../styles/fonts.scss';
 @import '../../styles/breakpoints.scss';
 
-.header__text {
+.header-text {
    font-size: $font-size-l;
 
    @include from-desktop {
@@ -13,10 +13,10 @@
    font-weight: bold;
 }
 
-.header__text--normal {
+.header-text--normal {
    font-weight: normal;
 }
 
-.header__text--lighter {
+.header-text--lighter {
    font-weight: lighter;
 }

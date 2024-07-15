@@ -7,13 +7,13 @@ $circle-size-desktop: 6.25rem;
 $logo-size: 65%;
 $hover-logo-size: 75%;
 
-.header__anchor {
+.html-logo__anchor {
    &:focus {
       @include focus-box-shadow;
    }
 }
 
-.header__html-logo {
+.html-logo__logo {
    @include flex(row, 0, center, center);
 
    width: $circle-size-mobile;
