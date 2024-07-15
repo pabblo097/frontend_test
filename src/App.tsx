@@ -5,6 +5,7 @@ import MainContent from './components/MainContent';
 import Modal from './components/Modal/Modal';
 import StorageModalLayout from './components/StorageModalLayout';
 import useModal from './hooks/useModal';
+import { _t } from './labels/t';
 
 function App() {
    const {
@@ -30,14 +31,14 @@ function App() {
             isModalOpened={isNoUniqueModalOpened}
             onCloseModal={() => setIsNoUniqueModalOpened(false)}
          >
-            {'Brak unikatowych treści do dodania.'}
+            {_t('modal.noUniqueContent')}
          </Modal>
 
          <Modal
             isModalOpened={isCantAddModalOpened}
             onCloseModal={() => setIsCantAddModalOpened(false)}
          >
-            {'Ta treść została już dodana.'}
+            {_t('modal.cantAddContent')}
          </Modal>
 
          <Modal

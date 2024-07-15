@@ -19,6 +19,8 @@ export const labels: Labels = {
    'headingWithDivider.label': 'Nagłówek H1',
 
    'modal.okButtonLabel': 'Ok',
+   'modal.noUniqueContent': 'Brak unikalnych treści do dodania.',
+   'modal.cantAddContent': 'Ta treść została już dodana.',
 
    'nabthatLogo.label': 'nabthat',
 
