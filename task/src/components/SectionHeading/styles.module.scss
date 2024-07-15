@@ -1,5 +1,7 @@
+@import '../../styles/fonts.scss';
+
 .section-heading {
-   font-size: 1.3rem;
+   font-size: $font-size-l;
    text-overflow: ellipsis;
    white-space: nowrap;
    overflow: hidden;

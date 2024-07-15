@@ -1,6 +1,7 @@
 @import '../../styles/colors.scss';
 @import '../../styles/flex.scss';
 @import '../../styles/breakpoints.scss';
+@import '../../styles/fonts.scss';
 
 .radio-button {
    @include flex(row, 0, normal, center);
@@ -26,7 +27,7 @@
 .radio-button__label {
    @include flex(row, 1em, normal, center);
 
-   font-size: 1.1rem;
+   font-size: 1.125rem;
    font-weight: lighter;
    transition: 0.2s;
 
@@ -39,6 +40,6 @@
    }
 
    @include from-desktop {
-      font-size: 1.4rem;
+      font-size: $font-size-xl;
    }
 }

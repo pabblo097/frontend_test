@@ -1,5 +1,6 @@
 @import '../../styles/breakpoints.scss';
 @import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
 
 .nabthat-logo {
    display: none;
@@ -12,7 +13,7 @@
 }
 
 .nabthat-logo__content {
-   font-size: 1.75rem;
+   font-size: $font-size-2xl;
    color: $colors-gray-400;
    z-index: 1;
    background: $colors-gray-500;

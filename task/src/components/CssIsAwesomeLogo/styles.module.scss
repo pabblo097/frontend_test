@@ -1,13 +1,14 @@
 @import '../../styles/flex.scss';
 @import '../../styles/colors.scss';
 @import '../../styles/breakpoints.scss';
+@import '../../styles/fonts.scss';
 
 .css-is-awesome-logo {
    @include flex(column, 0.25rem);
 
    position: relative;
    color: $colors-gray-400;
-   font-size: 1.4rem;
+   font-size: $font-size-xl;
    line-height: 1em;
    padding: 0.5rem;
    font-weight: light;
@@ -17,7 +18,7 @@
    transition: 0.3s;
 
    @include from-desktop {
-      font-size: 1.75rem;
+      font-size: $font-size-2xl;
    }
 
    &::before {

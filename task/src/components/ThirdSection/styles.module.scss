@@ -1,6 +1,7 @@
 @import '../../styles/breakpoints.scss';
 @import '../../styles/flex.scss';
 @import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
 
 .third-section {
    min-width: 0;
@@ -15,7 +16,7 @@
    @include flex(column, 1.5em);
 
    margin-top: 2.25rem;
-   font-size: 1rem;
+   font-size: $font-size-base;
    font-weight: lighter;
    color: $colors-gray-100;
 

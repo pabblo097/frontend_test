@@ -1,14 +1,15 @@
 @import '../../styles/flex.scss';
 @import '../../styles/breakpoints.scss';
+@import '../../styles/fonts.scss';
 
 .heading-with-divider {
    @include flex(column, 0.5em, normal, center);
 
-   font-size: 2rem;
+   font-size: $font-size-3xl;
    margin: 1.5rem auto;
 
    @include from-desktop {
-      font-size: 3rem;
+      font-size: $font-size-5xl;
       margin: 4rem auto;
    }
 }
