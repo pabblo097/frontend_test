@@ -1,4 +1,5 @@
 import useAppContext from '../../hooks/useAppContext';
+import { _t } from '../../labels/t';
 import HeaderText from '../HeaderText';
 import HtmlLogo from '../HtmlLogo';
 import styles from './styles.module.scss';
@@ -13,10 +14,10 @@ function Header() {
          </nav>
 
          <div className={styles['header__text-wrapper']}>
-            <HeaderText highlight={'rekrutacyjne'}>{'Zadanie rekrutacyjne'}</HeaderText>
+            <HeaderText highlight={_t('header.textHighlight')}>{_t('header.textLabel')}</HeaderText>
 
             {shouldDisplayName && (
-               <HeaderText fontWeight={'lighter'}>{'Paweł Wiewióra'}</HeaderText>
+               <HeaderText fontWeight={'lighter'}>{_t('header.name')}</HeaderText>
             )}
          </div>
       </header>

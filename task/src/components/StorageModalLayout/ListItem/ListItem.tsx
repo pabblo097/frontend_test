@@ -7,6 +7,7 @@ import {
 import { useState } from 'react';
 
 import { useStorage } from '../../../hooks/useStorage';
+import { _t } from '../../../labels/t';
 import Button from '../../Button';
 import { ListItemProps } from './constants';
 import styles from './styles.module.scss';
@@ -46,17 +47,17 @@ function ListItem({ item }: ListItemProps) {
 
                <div className={styles['list-item__buttons-wrapper']}>
                   <Button
-                     aria-label={'Zapisz'}
+                     aria-label={_t('storageModal.listItem.saveButtonLabel')}
                      icon={faFloppyDisk}
-                     title={'Zapisz'}
+                     title={_t('storageModal.listItem.saveButtonLabel')}
                      variant={'small'}
                      onClick={handleEditItem}
                   ></Button>
 
                   <Button
-                     aria-label={'Anuluj'}
+                     aria-label={_t('storageModal.listItem.cancelButtonLabel')}
                      icon={faXmark}
-                     title={'Anuluj'}
+                     title={_t('storageModal.listItem.cancelButtonLabel')}
                      variant={'small'}
                      onClick={() => handleSetInEditMode(false)}
                   ></Button>
@@ -68,17 +69,17 @@ function ListItem({ item }: ListItemProps) {
 
                <div className={styles['list-item__buttons-wrapper']}>
                   <Button
-                     aria-label={'Usuń'}
+                     aria-label={_t('storageModal.listItem.removeButtonLabel')}
                      icon={faTrash}
-                     title={'Usuń'}
+                     title={_t('storageModal.listItem.removeButtonLabel')}
                      variant={'small'}
                      onClick={() => removeItem(item.id)}
                   ></Button>
 
                   <Button
-                     aria-label={'Edytuj'}
+                     aria-label={_t('storageModal.listItem.editButtonLabel')}
                      icon={faPenToSquare}
-                     title={'Edytuj'}
+                     title={_t('storageModal.listItem.editButtonLabel')}
                      variant={'small'}
                      onClick={() => handleSetInEditMode(true)}
                   ></Button>

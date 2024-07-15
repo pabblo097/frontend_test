@@ -1,13 +1,14 @@
+import { _t } from '../../labels/t';
 import styles from './styles.module.scss';
 
 function CssIsAwesomeLogo() {
    return (
       <div className={styles['css-is-awesome-logo']}>
-         <p>{'CSS'}</p>
+         <p>{_t('cssIsAwesome.css')}</p>
 
-         <p>{'IS'}</p>
+         <p>{_t('cssIsAwesome.is')}</p>
 
-         <p>{'AWESOME'}</p>
+         <p>{_t('cssIsAwesome.awesome')}</p>
       </div>
    );
 }

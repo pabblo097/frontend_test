@@ -1,5 +1,6 @@
 import useAppContext from '../../hooks/useAppContext';
 import useModal from '../../hooks/useModal';
+import { _t } from '../../labels/t';
 import CssIsAwesomeLogo from '../CssIsAwesomeLogo';
 import Menu, { MenuItem } from '../Menu';
 import NabthatLogo from '../NabthatLogo';
@@ -20,15 +21,15 @@ function Footer() {
          </div>
 
          <div className={styles['footer__third-section']}>
-            <Menu buttonLabel={'POKAŻ'}>
-               <MenuItem onClick={reset}>{'ZRESETUJ USTAWIENIA'}</MenuItem>
+            <Menu buttonLabel={_t('footer.menuLabel')}>
+               <MenuItem onClick={reset}>{_t('footer.menu.resetLabel')}</MenuItem>
 
                <MenuItem onClick={() => setShouldDisplayName(true)}>
-                  {'POKAŻ DANE OSOBOWE'}
+                  {_t('footer.menu.showPersonalInfoLabel')}
                </MenuItem>
 
                <MenuItem onClick={() => setIsStorageModalOpened(true)}>
-                  {'EDYTUJ LOCAL STORAGE'}
+                  {_t('footer.menu.editStorageLabel')}
                </MenuItem>
             </Menu>
          </div>

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 
+import { _t } from '../../labels/t';
 import Button from '../Button';
 import { ModalProps } from './constants';
 import styles from './styles.module.scss';
@@ -37,7 +38,7 @@ function Modal({
             {children}
 
             <div className={styles.modal__footer}>
-               <Button onClick={onCloseModal}>{'Ok'}</Button>
+               <Button onClick={onCloseModal}>{_t('modal.okButtonLabel')}</Button>
             </div>
          </div>
       </dialog>

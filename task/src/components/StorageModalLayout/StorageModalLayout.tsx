@@ -1,4 +1,5 @@
 import { useStorage } from '../../hooks/useStorage';
+import { _t } from '../../labels/t';
 import AddItemSection from './AddItemSection';
 import ListItem from './ListItem';
 import styles from './styles.module.scss';
@@ -8,7 +9,7 @@ function StorageModalLayout() {
 
    return (
       <div className={styles['storage-modal']}>
-         <h2>{'Edytuj local storage'}</h2>
+         <h2>{_t('storageModal.heading')}</h2>
 
          <AddItemSection />
 

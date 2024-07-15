@@ -1,5 +1,5 @@
-
 import useAppContext from '../../hooks/useAppContext';
+import { _t } from '../../labels/t';
 import RadioButton from '../RadioButton';
 import SectionHeading from '../SectionHeading';
 import styles from './styles.module.scss';
@@ -9,31 +9,31 @@ function FirstSection() {
 
    return (
       <section className={styles['first-section']}>
-         <SectionHeading>{'BLOK PIERWSZY'}</SectionHeading>
+         <SectionHeading>{_t('firstSection.heading')}</SectionHeading>
 
          <div className={styles['first-section__radio-group']}>
             <RadioButton
                checked={option === 0}
-               name={'options'}
+               name={_t('firstSection.radioButtonsName')}
                onClick={() => setOption(0)}
             >
-               {'Opcja pierwsza'}
+               {_t('firstSection.firstRadioLabel')}
             </RadioButton>
 
             <RadioButton
                checked={option === 1}
-               name={'options'}
+               name={_t('firstSection.radioButtonsName')}
                onClick={() => setOption(1)}
             >
-               {'Opcja druga'}
+               {_t('firstSection.secondRadioLabel')}
             </RadioButton>
 
             <RadioButton
                checked={option === 2}
-               name={'options'}
+               name={_t('firstSection.radioButtonsName')}
                onClick={() => setOption(2)}
             >
-               {'Opcja losowa'}
+               {_t('firstSection.thirdRadioLabel')}
             </RadioButton>
          </div>
       </section>

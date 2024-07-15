@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { useStorage } from '../../../hooks/useStorage';
+import { _t } from '../../../labels/t';
 import Button from '../../Button';
 import styles from './styles.module.scss';
 
@@ -28,7 +29,7 @@ function AddItemSection() {
          ></textarea>
 
          <div className={styles['add-item__button-wrapper']}>
-            <Button onClick={handleAddItem}>{'DODAJ'}</Button>
+            <Button onClick={handleAddItem}>{_t('storageModal.addItem.addButtonLabel')}</Button>
          </div>
       </div>
    );
