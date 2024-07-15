@@ -3,10 +3,9 @@
 @import '../../styles/breakpoints.scss';
 
 .footer {
-   @include flex-row;
-   align-items: center;
+   @include flex(row, 0, space-between, center);
+
    padding: 1.125rem 1.25rem;
-   justify-content: space-between;
    background: $colors-gray-500;
 
    @include from-desktop {
@@ -15,19 +14,19 @@
 }
 
 .footer__first-section {
-   @include flex-row;
-   justify-content: start;
+   @include flex(row, 0, start);
+
    flex-basis: calc(100% / 3);
 }
 
 .footer__second-section {
-   @include flex-row;
-   justify-content: center;
+   @include flex(row, 0, center);
+
    flex-basis: calc(100% / 3);
 }
 
 .footer__third-section {
-   @include flex-row;
-   justify-content: end;
+   @include flex(row, 0, end);
+
    flex-basis: calc(100% / 3);
 }

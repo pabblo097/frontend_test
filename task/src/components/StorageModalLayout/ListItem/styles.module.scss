@@ -2,17 +2,16 @@
 @import '../../../styles/colors.scss';
 
 .list-item {
-   @include flex-row;
-   justify-content: space-between;
-   align-items: stretch;
+   @include flex(row, 1rem, space-between, stretch);
+
    background: $colors-gray-500;
    padding: 1rem;
    border-radius: 4px;
-   gap: 1rem;
 }
 
 .list-item__content {
-   @include flex-row;
+   @include flex(row);
+
    flex-grow: 1;
 }
 
@@ -21,7 +20,5 @@
 }
 
 .list-item__buttons-wrapper {
-   @include flex-column;
-   align-items: start;
-   gap: 0.5rem;
+   @include flex(column, 0.5rem, normal, start);
 }

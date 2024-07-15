@@ -2,21 +2,20 @@
 @import '../../styles/breakpoints.scss';
 
 .main-content {
-   @include flex-column;
+   @include flex(column, 3.5rem);
+
    padding: 2rem;
-   gap: 3.5rem;
    flex: 1;
 
    @include from-desktop {
-      @include flex-row;
-      gap: 0;
+      @include flex(row, 0);
+
       padding: 2rem 4rem;
    }
 }
 
 .main-content__sections-wrapper {
-   @include flex-row;
-   justify-content: space-between;
+   @include flex(row, 0, space-between);
    flex-basis: calc(100% / 3 * 2);
    flex-shrink: 0;
 }

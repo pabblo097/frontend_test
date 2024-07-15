@@ -12,10 +12,10 @@
 }
 
 .menu__content {
-   @include flex-column;
+   @include flex(column, 0.5rem);
+
    opacity: 0;
    pointer-events: none;
-   gap: 0.5rem;
    width: 100%;
    bottom: 100%;
    right: 0;

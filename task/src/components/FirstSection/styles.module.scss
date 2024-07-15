@@ -2,9 +2,7 @@
 @import '../../styles/breakpoints.scss';
 
 .first-section {
-   @include flex-column;
-   gap: 1.5rem;
-   align-items: start;
+   @include flex(column, 1.5rem, normal, start);
 
    @include from-desktop {
       flex-basis: 50%;
@@ -14,7 +12,6 @@
 }
 
 .first-section__radio-group {
-   @include flex-column;
+   @include flex(column, 1.5rem);
    align-self: start;
-   gap: 1.25rem;
 }

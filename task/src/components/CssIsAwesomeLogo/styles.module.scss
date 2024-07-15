@@ -3,10 +3,10 @@
 @import '../../styles/breakpoints.scss';
 
 .css-is-awesome-logo {
-   @include flex-column;
+   @include flex(column, 0.25rem);
+
    position: relative;
    color: $colors-gray-400;
-   gap: 0.25em;
    font-size: 1.4rem;
    line-height: 1em;
    padding: 0.5rem;

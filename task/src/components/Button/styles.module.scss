@@ -2,9 +2,8 @@
 @import '../../styles/flex.scss';
 
 .button {
-   @include flex-row;
-   justify-content: space-between;
-   gap: 0.75em;
+   @include flex(row, 0.75rem, space-between);
+
    font-size: 1rem;
    font-weight: bold;
    color: $colors-gray-100;

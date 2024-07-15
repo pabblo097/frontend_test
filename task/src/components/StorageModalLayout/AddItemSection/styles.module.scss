@@ -1,8 +1,7 @@
 @import '../../../styles/flex.scss';
 
 .add-item {
-   @include flex-row;
-   gap: 1rem;
+   @include flex(row, 1rem);
 }
 
 .add-item__textarea {
@@ -10,6 +9,5 @@
 }
 
 .add-item__button-wrapper {
-   @include flex-row;
-   align-items: start;
+   @include flex(row, 0, normal, start);
 }

@@ -16,15 +16,15 @@
 }
 
 .modal__content {
-   @include flex-column;
-   align-items: center;
+   @include flex(column, 0, normal, center);
+
    color: white;
 }
 
 .modal__footer {
+   @include flex(row, 0, center);
+
    width: 100%;
-   @include flex-row;
-   justify-content: center;
    position: sticky;
    bottom: 0;
    background: $colors-gray-400;

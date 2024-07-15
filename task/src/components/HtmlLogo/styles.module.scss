@@ -14,7 +14,7 @@ $hover-logo-size: 75%;
 }
 
 .header__html-logo {
-   @include flex-center;
+   @include flex(row, 0, center, center);
 
    width: $circle-size-mobile;
    height: $circle-size-mobile;

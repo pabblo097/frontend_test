@@ -23,6 +23,6 @@ body {
 }
 
 #root {
-   @include flex-column;
+   @include flex(column);
    min-height: 100vh;
 }

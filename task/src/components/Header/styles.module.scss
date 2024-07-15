@@ -4,11 +4,10 @@
 @import '../../styles/breakpoints.scss';
 
 .header {
-   @include flex-row;
+   @include flex(row, 0, space-between, center);
+
    padding: 1.125rem 1.25rem;
    background: $colors-gray-600;
-   justify-content: space-between;
-   align-items: center;
    top: 0;
    position: sticky;
    z-index: 10;
@@ -19,6 +18,5 @@
 }
 
 .header__text-wrapper {
-   @include flex-column;
-   align-items: end;
+   @include flex(column, 0, normal, end);
 }

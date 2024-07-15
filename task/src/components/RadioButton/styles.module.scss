@@ -3,8 +3,7 @@
 @import '../../styles/breakpoints.scss';
 
 .radio-button {
-   @include flex-row;
-   align-items: center;
+   @include flex(row, 0, normal, center);
 }
 
 .radio-button__input {
@@ -25,10 +24,9 @@
 }
 
 .radio-button__label {
-   @include flex-row;
-   align-items: center;
+   @include flex(row, 1em, normal, center);
+
    font-size: 1.1rem;
-   gap: 1em;
    font-weight: lighter;
    transition: 0.2s;
 

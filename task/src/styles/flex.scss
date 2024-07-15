@@ -1,17 +1,7 @@
-// TODO: figure out best flex mixin to cover most scenarios
-@mixin flex-row {
+@mixin flex($direction: row, $gap: 0, $justify: normal, $align: normal) {
    display: flex;
-   flex-direction: row;
-}
-
-@mixin flex-column {
-   display: flex;
-   flex-direction: column;
-}
-
-@mixin flex-center {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
+   flex-direction: $direction;
+   justify-content: $justify;
+   align-items: $align;
+   gap: $gap;
 }
