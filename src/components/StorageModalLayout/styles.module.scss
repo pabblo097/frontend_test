@@ -2,7 +2,7 @@
 @import '../../styles/colors.scss';
 
 .storage-modal {
-   @include flex(column, 1rem);
+   @include flex(column, 2rem);
 
    width: 100%;
 }

@@ -40,5 +40,9 @@ export function useStorage() {
       [setData],
    );
 
-   return { data, setData, removeItem, addItem, editItem };
+   const resetData = useCallback(() => {
+      setData(jsonData);
+   }, [setData]);
+
+   return { data, removeItem, addItem, editItem, resetData };
 }

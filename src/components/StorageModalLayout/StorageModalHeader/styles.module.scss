@@ -1,0 +1,5 @@
+@import '../../../styles/flex.scss';
+
+.storage-modal-header {
+   @include flex(row, 0, space-between);
+}
