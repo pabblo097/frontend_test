@@ -8,14 +8,7 @@ import useModal from './hooks/useModal';
 import { _t } from './labels/t';
 
 function App() {
-   const {
-      isNoUniqueModalOpened,
-      setIsNoUniqueModalOpened,
-      isCantAddModalOpened,
-      setIsCantAddModalOpened,
-      isStorageModalOpened,
-      setIsStorageModalOpened,
-   } = useModal();
+   const { getIsModalOpen, closeModal } = useModal();
 
    return (
       <>
@@ -28,23 +21,30 @@ function App() {
          <Footer />
 
          <Modal
-            isModalOpened={isNoUniqueModalOpened}
-            onCloseModal={() => setIsNoUniqueModalOpened(false)}
+            isModalOpened={getIsModalOpen(_t('modal.noUniqueContentId'))}
+            onCloseModal={() => closeModal(_t('modal.noUniqueContentId'))}
          >
-            {_t('modal.noUniqueContent')}
+            {_t('modal.noUniqueContentLabel')}
          </Modal>
 
          <Modal
-            isModalOpened={isCantAddModalOpened}
-            onCloseModal={() => setIsCantAddModalOpened(false)}
+            isModalOpened={getIsModalOpen(_t('modal.cantAddContentId'))}
+            onCloseModal={() => closeModal(_t('modal.cantAddContentId'))}
          >
-            {_t('modal.cantAddContent')}
+            {_t('modal.cantAddContentLabel')}
          </Modal>
 
          <Modal
-            isModalOpened={isStorageModalOpened}
+            isModalOpened={getIsModalOpen(_t('modal.noDataId'))}
+            onCloseModal={() => closeModal(_t('modal.noDataId'))}
+         >
+            {_t('modal.noDataLabel')}
+         </Modal>
+
+         <Modal
+            isModalOpened={getIsModalOpen(_t('modal.storageId'))}
             maxWidth={900}
-            onCloseModal={() => setIsStorageModalOpened(false)}
+            onCloseModal={() => closeModal(_t('modal.storageId'))}
          >
             <StorageModalLayout />
          </Modal>

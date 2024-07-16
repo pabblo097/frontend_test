@@ -8,7 +8,7 @@ import styles from './styles.module.scss';
 
 function Footer() {
    const { setShouldDisplayName, reset } = useAppContext();
-   const { setIsStorageModalOpened } = useModal();
+   const { openModal } = useModal();
 
    return (
       <footer className={styles.footer}>
@@ -28,7 +28,7 @@ function Footer() {
                   {_t('footer.menu.showPersonalInfoLabel')}
                </MenuItem>
 
-               <MenuItem onClick={() => setIsStorageModalOpened(true)}>
+               <MenuItem onClick={() => openModal(_t('modal.storageId'))}>
                   {_t('footer.menu.editStorageLabel')}
                </MenuItem>
             </Menu>

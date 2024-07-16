@@ -7,7 +7,6 @@ import {
 } from 'react';
 
 import { useContent } from '../hooks/useContent';
-import useModal from '../hooks/useModal';
 import { useStorage } from '../hooks/useStorage';
 import { AppContextType } from './constants';
 
@@ -17,16 +16,11 @@ export function AppContextProvider({ children }: { children: ReactNode }) {
    const [shouldDisplayName, setShouldDisplayName] = useState(false);
 
    const { data } = useStorage();
-   const { setIsNoUniqueModalOpened, setIsCantAddModalOpened } = useModal();
-   const { content, setContent, option, setOption, addContent, replaceContent } = useContent(
-      data,
-      setIsNoUniqueModalOpened,
-      setIsCantAddModalOpened,
-   );
+   const { content, setContent, option, setOption, addContent, replaceContent } = useContent();
 
    const reset = useCallback(() => {
       setShouldDisplayName(false);
-      setContent([data[0]]);
+      setContent(data.length === 0 ? [] : [data[0]]);
       setOption(0);
    }, [data, setContent, setOption]);
 

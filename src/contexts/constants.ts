@@ -14,10 +14,7 @@ export interface AppContextType {
 }
 
 export interface ModalContextType {
-   isNoUniqueModalOpened: boolean;
-   setIsNoUniqueModalOpened: Dispatch<SetStateAction<boolean>>;
-   isCantAddModalOpened: boolean;
-   setIsCantAddModalOpened: Dispatch<SetStateAction<boolean>>;
-   isStorageModalOpened: boolean;
-   setIsStorageModalOpened: Dispatch<SetStateAction<boolean>>;
+   getIsModalOpen: (id: string) => boolean;
+   openModal: (id: string) => void;
+   closeModal: (id: string) => void;
 }

@@ -1,25 +1,36 @@
 import { useCallback, useState } from 'react';
 
-import { JsonData } from './constants';
+import { _t } from '../labels/t';
 import { getIndexFromOption } from './helpers';
+import useModal from './useModal';
+import { useStorage } from './useStorage';
 
-export function useContent(
-   data: JsonData[],
-   setIsNoUniqueModalOpened: React.Dispatch<React.SetStateAction<boolean>>,
-   setIsCantAddModalOpened: React.Dispatch<React.SetStateAction<boolean>>,
-) {
-   const [content, setContent] = useState([data[0]]);
+export function useContent() {
+   const { data } = useStorage();
+   const { openModal } = useModal();
+
+   const [content, setContent] = useState(data.length === 0 ? [] : [data[0]]);
    const [option, setOption] = useState(0);
 
    const replaceContent = useCallback(() => {
+      if (data.length === 0) {
+         openModal(_t('modal.noUniqueContentId'));
+         return;
+      }
+
       const index = getIndexFromOption(option, data);
 
+      if (data[index] === undefined) {
+         openModal(_t('modal.noDataId'));
+         return;
+      }
+
       setContent([data[index]]);
-   }, [data, option]);
+   }, [data, openModal, option]);
 
    const addContent = useCallback(() => {
-      if (content.length === data.length) {
-         setIsNoUniqueModalOpened(true);
+      if (data.length === 0 || content.length === data.length) {
+         openModal(_t('modal.noUniqueContentId'));
          return;
       }
 
@@ -27,7 +38,7 @@ export function useContent(
 
       if (content.some((v) => v.id === data[index].id)) {
          if (option !== 2) {
-            setIsCantAddModalOpened(true);
+            openModal(_t('modal.cantAddContentId'));
             return;
          }
 
@@ -36,7 +47,7 @@ export function useContent(
       }
 
       setContent((prevValue) => [...prevValue, data[index]]);
-   }, [content, data, option, setIsCantAddModalOpened, setIsNoUniqueModalOpened]);
+   }, [content, data, openModal, option]);
 
    return { content, setContent, option, setOption, replaceContent, addContent };
 }
