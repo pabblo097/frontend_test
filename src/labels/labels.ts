@@ -19,12 +19,18 @@ export const labels: Labels = {
    'headingWithDivider.label': 'Nagłówek H1',
 
    'modal.okButtonLabel': 'Ok',
-   'modal.noUniqueContent': 'Brak unikalnych treści do dodania.',
-   'modal.cantAddContent': 'Ta treść została już dodana.',
+   'modal.noUniqueContentId': 'no-unique-content',
+   'modal.noUniqueContentLabel': 'Brak treści do dodania.',
+   'modal.cantAddContentId': 'cant-add-content',
+   'modal.cantAddContentLabel': 'Ta treść została już dodana.',
+   'modal.storageId': 'storage',
+   'modal.noDataId': 'no-data',
+   'modal.noDataLabel': 'Ta treść nie istnieje',
 
    'nabthatLogo.label': 'nabthat',
 
    'storageModal.heading': 'Edytuj local storage',
+   'storageModal.resetButtonLabel': 'ZRESETUJ',
    'storageModal.addItem.addButtonLabel': 'DODAJ',
    'storageModal.listItem.saveButtonLabel': 'Zapisz',
    'storageModal.listItem.cancelButtonLabel': 'Anuluj',
