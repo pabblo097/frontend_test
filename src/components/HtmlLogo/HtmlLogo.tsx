@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 
 function HtmlLogo() {
    return (
-      <a href={'/'}>
+      <a href={'/frontend_test/'}>
          <div className={styles['html-logo__logo']}>
             <FontAwesomeIcon icon={faHtml5} />
          </div>
